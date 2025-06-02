@@ -1,0 +1,380 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background:linear-gradient(to right, #b3cee5, #f7cac9)
+  }
+.logo span {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  font-weight: bolder;
+  color: #f7cac9;
+  text-shadow: 2px 2px 5px #a94544;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+nav a {
+    color: white;
+    margin: 0 50px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+@media (max-width: 768px) {
+  nav {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  nav a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 14px;
+  }
+}
+
+  nav a:visited {
+    color: #ffffff;
+  }
+
+nav a:hover {
+    color: #f7cac9;
+    text-decoration: underline;
+    text-decoration-color: #f7cac9;
+  }
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+h2 {
+    color: #f7cac9;
+    text-shadow: 1px 1px 2px #000000;
+  }
+
+#beranda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 40px;
+    gap: 90px;
+    flex-wrap: wrap;
+  }
+
+#beranda img {
+    width: 200px;
+    border-style: solid;
+    border-color: #b3cee5;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+
+.beranda-text {
+    max-width: 400px;
+    text-align: left;
+  }
+.beranda-h1 {
+  color: #f7cac9;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+@media (max-width: 768px) {
+  #beranda img {
+    margin-left: 0;
+  }
+  #beranda {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .beranda-text{
+    text-align: center;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.text {
+  flex: 2;
+}
+
+.image {
+  flex: 0;
+}
+
+img {
+  width: 250px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .image {
+    margin: 20px;
+  }
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .sosmed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    max-width: 300px;
+    background: #f0d5d4;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    position: static;
+    width: 100%;
+  }
+
+  .sosmed-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: rgb(174, 107, 107);
+    background-color: #f7cac9;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  .sosmed-item i {
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 50%;
+    color: rgb(174, 107, 107);
+  }
+
+  .email i { background: #b3cee5; }
+  .instagram i { background: #b3cee5; }
+  .tiktok i { background: #b3cee5; }
+
+  .sosmed-item span {
+    font-size: 16px;
+  }
+
+  .sosmed-item:hover {
+    opacity: 0.85;
+    transform: translateX(5px);
+  }
+
+  @media (max-width: 500px) {
+    .sosmed-container {
+      max-width: 90%;
+      position: static;
+      margin: 40px auto 0 auto;
+      top: auto;
+      right: auto;
+      transform: none;
+    }
+  }
+
+  .judul-opini {
+    text-align: center;
+    margin-top: 2rem;
+    color: #f7cac9;
+  }
+
+  .opini-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .opini-card {
+    background: #b3cee5;
+    width: 250px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+  }
+
+  .opini-card:hover {
+    transform: scale(1.03);
+  }
+
+  .opini-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .judul {
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+
+  /* Modal dasar */
+  .modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .modal:target {
+    display: flex;
+    animation: fadeIn 0.4s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .modal-box {
+    background: #b3cee5;
+    padding: 1.5rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: slideUp 0.3s ease;
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #4444;
+  }
+
+  .close:hover {
+    color: red;
+  }
+
+  .hubungi-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .form-kontak {
+    flex: 1;
+  }
+
+  .form-kontak h2 {
+    margin-bottom: 20px;
+  }
+
+  .form-kontak label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+
+  .form-kontak input, .form-kontak textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+  }
+
+  .form-kontak button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #b3cee5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .form-kontak button:hover {
+    background-color: #f7cac9;
+  }
+
+  .kontak-kanan {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .kontak-kanan iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    min-height: 400px;
+  }
+
+footer {
+    background: linear-gradient(to right, #b3cee5, #f7cac9);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 768px) {
+    .opini-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .opini-box {
+      width: 100%;
+    }
+  
+    .hubungi-container {
+      flex-direction: column;
+      padding: 20px 10px;
+    }
+  
+    .form-kontak,
+    .kontak-kanan {
+      width: 100%;
+    }
+  
+    .kontak-kanan iframe {
+      min-height: 300px;
+    }
+  
+    footer {
+      font-size: 14px;
+      padding: 15px;
+    }
+  }
